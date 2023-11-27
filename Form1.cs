@@ -62,5 +62,18 @@ namespace lastonebd
             Worker worker = new Worker();
             worker.Show();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in listView1.SelectedItems)
+            {
+                var temp = item as ListViewItem;
+                var text = temp.Text;
+                using DataContext db = new DataContext();
+                var section = db.ISections.First(i => i.Name == text);
+                ListWorkers ls = new ListWorkers(section.Id);
+                ls.Show();
+            }
+        }
     }
 }

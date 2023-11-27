@@ -8,6 +8,7 @@ namespace lastonebd.Data
 
         public DbSet<IWorkers> IWorkersTab { get; set; }
         public DbSet<ISection> ISections { get; set; }
+        public DbSet<Offers> OffersTab { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

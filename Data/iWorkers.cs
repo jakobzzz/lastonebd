@@ -26,6 +26,9 @@ namespace lastonebd.Data
 
         public ISection ISection { get; set; }
 
-
+        public override string ToString()
+        {
+            return $"{Surname} {Name} | {Number}";
+        }
     }
 }
