@@ -16,7 +16,7 @@ namespace lastonebd.Data
 
         public string Name { get; set; }
 
-        public int Surname { get; set; }
+        public string Surname { get; set; } // забыл int to str
 
         public int Age { get; set; }
 

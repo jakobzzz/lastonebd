@@ -11,9 +11,14 @@ namespace lastonebd.Data
     {
         public int Id { get; set; }
 
-        public required string Name { get; set; }
+        public string Name { get; set; }
+        // public required string Name { get; set; }
 
-        public required ICollection<IWorkers> IWorkersTab { get; set; }
-
+        public ICollection<IWorkers> IWorkersTab { get; set; }
+        // public required ICollection<IWorkers> IWorkersTab { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
